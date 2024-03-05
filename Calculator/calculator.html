@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calculator</title>
+    <style>
+        * {
+            font-size: x-large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        button {
+            border-radius: 10px;
+            height: 30px;
+            padding-bottom: 4px;
+            display: inline-flex;
+        }
+
+        div {
+            background-color: aquamarine;
+            text-align: center;
+            height: 500px;
+            width: 400px;
+            margin-top: 100px;
+            margin-left: 550px;
+            border: solid black 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Simple Calculator</h1>
+        <p>Enter first Number :<input type="number" id="num1" placeholder="Enter number"></p>
+        <p>Enter second Number:<input type="number" id="num2" placeholder="Enter number"></p>
+        <p>
+            calculation
+        </p>
+        <button onclick="add()">Addition</button>
+        <button onclick="sub()">Subtraction</button>
+        <button onclick="mul()">Multiplication</button>
+        <button onclick="div()">Division</button>
+        <p>Answer 👇🏽</p>
+        <p id="ans">Answer will display here!</p>
+    </div>
+
+
+    <script>
+        function add() {
+            First = parseInt(document.getElementById("num1").value);
+            Second = parseInt(document.getElementById("num2").value);
+            add = First + Second;
+            // window.alert("Your sum is : "+ add);
+            document.getElementById("ans").innerHTML = "Your addition is: " + add;
+        }
+        function sub() {
+            First = parseInt(document.getElementById("num1").value);
+            Second = parseInt(document.getElementById("num2").value);
+            sub = First - Second;
+            // window.alert("Your sum is : "+ sub);
+            document.getElementById("ans").innerHTML = "Your subtraction is: " + sub;
+        }
+        function mul() {
+            First = parseInt(document.getElementById("num1").value);
+            Second = parseInt(document.getElementById("num2").value);
+            mul = First * Second;
+            // window.alert("Your sum is : "+ mul);
+            document.getElementById("ans").innerHTML = "Your multiplication is: " + mul;
+        }
+        function div() {
+            First = parseInt(document.getElementById("num1").value);
+            Second = parseInt(document.getElementById("num2").value);
+            mul = First / Second;
+            // window.alert("Your sum is : "+ div);
+            document.getElementById("ans").innerHTML = "Your division is: " + mul;
+        }
+    </script>
+
+</body>
+
+</html>
